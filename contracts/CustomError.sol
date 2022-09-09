@@ -4,7 +4,7 @@ pragma solidity ^0.8;
 //custom error
 error Unauthorized(address caller);
 
-library CustomError {
+contract CustomError {
     address payable owner = payable(msg.sender);
 
     function withdraw() public {

@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8;
  
-library SafeMath {
+contract SafeMath {
     function testUnderFlow() public pure returns (uint256) {
         uint256 x = 0;
         x--;
