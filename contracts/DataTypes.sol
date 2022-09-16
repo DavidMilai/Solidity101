@@ -9,7 +9,8 @@ contract DataTypes {
     int256 public minInt = type(int256).min; // getting the minimum int
     int256 public maxInt = type(int256).max; // getting the maximum int
 
-    address public myAddrex = 0x111ceaFFFFCCCC;
+    address public myAddrex = 0x111ceaFFFFCCCC; //sample address
 
     bytes32 public b32 = 0x111ceaFFFFCCCC;
+
 }
