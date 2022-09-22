@@ -9,31 +9,24 @@ contract FunctionModifier {
         paused = _paused;
     }
 
-    modifier whenNotPaused(){
-                require(!paused, "Paused");
-; 
-
+    modifier whenNotPaused() {
+        require(!paused, "Paused");
+        _;
     }
-        modifier cap(uint _x){
-
-            require(_x<100, "x>=100");
-            ; 
-
+    modifier cap(uint _x) {
+        require(_x < 100, "x>=100");
+        _;
     }
 
-    function inc() external whenNotPaused{
+    function inc() external whenNotPaused {
         count += 1;
     }
 
-    function dec() external whenNotPaused{
-         count -= 1;
+    function dec() external whenNotPaused {
+        count -= 1;
     }
 
-    function incBy(uint _x) external cap(_x){
+    function incBy(uint _x) external cap(_X) {
         count += 1;
     }
-
-
-
-
 }
