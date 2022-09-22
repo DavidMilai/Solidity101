@@ -1,16 +1,12 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8;
+pragma solidity ^0.8.7;
 
-//custom error
-error Unauthorized(address caller);
+contract Constructor {
+    address public owner;
+    uint public x;
 
-contract CustomError {
-    address payable owner = payable(msg.sender);
-
-    function withdraw() public {
-        if (msg.sender != owner) revert Unauthorized(msg.sender);
-        //  revert("error"); uses alot of gas
-
-        owner.transfer(address(this).balance);
+    constructor(uint _x) {
+        owner = msg.sender;
+        x = _x;
     }
 }
