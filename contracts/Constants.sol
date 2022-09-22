@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 
-pragma solidity 0.8.7;
+pragma solidity ^0.8.7;
 
 contract Constants {
     address public constant MY_ADDRESS = 0x8785695894534245u; //advantage is it uses lower gas cost
