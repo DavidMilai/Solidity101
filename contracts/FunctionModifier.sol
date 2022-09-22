@@ -11,7 +11,14 @@ contract FunctionModifier {
 
     modifier whenNotPaused(){
                 require(!paused, "Paused");
-;
+; 
+
+    }
+        modifier cap(uint _x){
+
+            require(_x<100, "x>=100");
+            ; 
+
     }
 
     function inc() external whenNotPaused{
@@ -21,4 +28,12 @@ contract FunctionModifier {
     function dec() external whenNotPaused{
          count -= 1;
     }
+
+    function incBy(uint _x) external cap(_x){
+        count += 1;
+    }
+
+
+
+
 }
