@@ -9,5 +9,12 @@ contract Array {
         nums.push(10); //  [1,2,3,7,8,9,10]
         uint x = nums[3]; //7
         nums[2] = 50; // [1,2,50,7,8,9,10]
+        delete nums[0]; // [0,2,50,7,8,9,10]
+        nums.pop(); // [1,2,50,7,8,9]
+        uint len = nums.length; //6
+
+        // creating array in memory
+        uint[] memory a  = new uint [](5);
+
     }
 }
