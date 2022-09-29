@@ -15,6 +15,10 @@ contract Array {
 
         // creating array in memory
         uint[] memory a  = new uint [](5);
-
     }
+
+    function returnArray() external view returns (uint[] memory) {
+        return nums;
+    }
+
 }
