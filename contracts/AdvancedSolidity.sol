@@ -26,7 +26,7 @@ enum Status{
     mapping(uint256 => Status) todos;
 
 
-    function addTask(uint256) public{
+    function addTask(uint256 id) public{
         todos[id] =Status.TODO;
     }
 
@@ -39,6 +39,6 @@ enum Status{
     }
 
     function markTaskInProgress(uint256 id) public{
-        todos = Status.IN_PROGRESS;
+        todos[id] = Status.IN_PROGRESS;
     }
 }
