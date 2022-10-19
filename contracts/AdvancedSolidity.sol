@@ -37,4 +37,8 @@ enum Status{
     function getStatus(uint256 id) public view returns (Status){
         return todos[id];
     }
+
+    function markTaskInProgress(uint256 id) public{
+        todos = Status.IN_PROGRESS;
+    }
 }
