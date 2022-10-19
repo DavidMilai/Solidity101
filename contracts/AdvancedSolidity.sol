@@ -78,4 +78,11 @@ contract Struct {
 
         tasks[id] = task;
     }
+
+
+function editTaskTitle(uint256 id, string memory newtitle)public{
+    tasks[id].title = newtitle;
+}
+
+    
 }
