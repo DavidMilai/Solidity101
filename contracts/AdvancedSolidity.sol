@@ -13,3 +13,28 @@ contract Mapping{
         moods[msg.sender] = mood;
     }
 }
+
+contract Enums{
+
+enum Status{
+    TODO,
+    IN_PROGRESS,
+    DONE,
+    CANCELED
+}
+
+    mapping(uint256 => Status) todos;
+
+
+    function addTask(uint256) public{
+        todos[id] =Status.TODO;
+    }
+
+    function updateStatus(uint256 id, Status newStatus) public{
+        todos[id] = newStatus;
+    }
+
+    function getStatus(uint256 id) public view returns (Status){
+        return todos[id];
+    }
+}
