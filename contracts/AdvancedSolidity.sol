@@ -84,4 +84,13 @@ contract Struct {
     }
 }
 
-contract Inheritance{}
+contract ETHSender {
+    function mirror() public payable {
+        address payable target = payable(msg.sender);
+        uint256 amount = msg.value;
+
+        // (bool success,bytes memory data) = target.call{value:amount}("");
+        (bool success, ) = target.call{value: amount}("");
+        require(success, "Failed");
+    }
+}
