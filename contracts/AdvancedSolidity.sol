@@ -109,4 +109,10 @@ contract Liraries {
     }
 }
 
+contract Events {
+    event TestFunctionCalled(address sender, string message);
 
+    function test() public {
+        emit TestFunctionCalled(msg.sender, "Somebody called test");
+    }
+}
