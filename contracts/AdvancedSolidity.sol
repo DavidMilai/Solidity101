@@ -94,3 +94,17 @@ contract ETHSender {
         require(success, "Failed");
     }
 }
+
+library SafeMath {
+    function add(uint x, uint y) internal pure returns (uint) {
+        uint z = x + y;
+        require(z >= x, "Overflow happened");
+        return z;
+    }
+}
+
+contract Liraries {
+    function add(uint x, uint y) public pure returns (uint) {
+        return SafeMath.add(x, y);
+    }
+}
